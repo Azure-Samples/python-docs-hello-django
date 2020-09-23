@@ -1,57 +1,27 @@
-# Project Name
+---
+page_type: sample
+description: "A minimal sample app that can be used to demonstrate deploying Django apps to Azure App Service on Linux."
+languages:
+- python
+products:
+- azure
+- azure-app-service
+---
 
-(short, 1-3 sentenced, description of the project)
+# Python Django sample for Azure App Service (Linux)
 
-## Features
+This is a minimal Django app, without a database, that can be deployed to Azure App Service on Linux.
 
-This project framework provides the following features:
+For instructions on running and deploying the code, see [Quickstart: Create a Python app in Azure App Service on Linux](https://docs.microsoft.com/azure/app-service/quickstart-python).
 
-* Feature 1
-* Feature 2
-* ...
+## Changes to Django settings
 
-## Getting Started
+This sample contains two modifications in the file *django_hello/settings.py*:
 
-### Prerequisites
+- `ALLOWED_HOSTS` is set to include the value of the `WEBSITE_HOSTNAME` environment variable, if present. Azure App Service automatically sets this environment variable upon deployment to the app's URL.
 
-(ideally very short, if any)
+- The `DATABASES` object is commented out (using """) so that the app doesn't attempt to use a database at all. To use a database, remove the comments and modify the values as appropriate for your database.
 
-- OS
-- Library version
-- ...
+## Contributing
 
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
