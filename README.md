@@ -6,6 +6,7 @@ languages:
 products:
 - azure
 - azure-app-service
+and a lot more services to discover
 ---
 
 # Python Django sample for Azure App Service (Linux)
